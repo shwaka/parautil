@@ -1,4 +1,4 @@
-package com.github.shwaka.kohomology.parallel
+package com.github.shwaka.parautil
 
 // runBlocking, async, await do not exist on multiplatform project
 

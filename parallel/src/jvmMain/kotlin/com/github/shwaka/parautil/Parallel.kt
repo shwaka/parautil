@@ -1,4 +1,4 @@
-package com.github.shwaka.kohomology.parallel
+package com.github.shwaka.parautil
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async

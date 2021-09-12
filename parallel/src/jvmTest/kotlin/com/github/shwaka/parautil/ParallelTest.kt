@@ -1,4 +1,4 @@
-package com.github.shwaka.kohomology.parallel
+package com.github.shwaka.parautil
 
 import io.kotest.core.NamedTag
 import io.kotest.core.spec.style.FreeSpec
