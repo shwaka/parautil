@@ -101,3 +101,12 @@ testlogger {
     showStandardStreams = true
     showFullStackTraces = true
 }
+
+publishing {
+    repositories {
+        maven {
+            url = uri("../../maven/repository")
+            name = "MyMaven"
+        }
+    }
+}
