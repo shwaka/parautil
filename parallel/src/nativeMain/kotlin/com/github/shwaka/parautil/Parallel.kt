@@ -1,1 +1,1 @@
-../../../../../../../jsMain/kotlin/com/github/shwaka/kohomology/parallel/Parallel.kt
+../../../../../../jsMain/kotlin/com/github/shwaka/parautil/Parallel.kt
