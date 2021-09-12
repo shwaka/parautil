@@ -15,12 +15,12 @@ class ParallelTest : FreeSpec({
         intList.pmap(transform) shouldBe intList.map(transform)
     }
 
-    "pforEach should do the same as forEach" {
+    "pforEach should do the same as forEach except for the order" {
         val intList = listOf(1, 4, 2, 3)
         val list1 = mutableListOf<Int>()
         intList.pforEach { list1.add(it) }
         val list2 = mutableListOf<Int>()
         intList.forEach { list2.add(it) }
-        list1 shouldBe list2
+        list1.sorted() shouldBe list2.sorted()
     }
 })

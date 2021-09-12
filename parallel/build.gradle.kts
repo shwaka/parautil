@@ -1,6 +1,15 @@
 plugins {
-    kotlin("multiplatform")
-    id("com.adarshr.test-logger")
+    kotlin("multiplatform") version "1.4.31"
+    `maven-publish`
+    id("com.adarshr.test-logger") version "3.0.0"
+}
+
+group = "com.github.shwaka.parautil"
+version = "0.1"
+
+repositories {
+    jcenter()
+    // maven(url = "https://shwaka.github.io/maven/")
 }
 
 kotlin {
@@ -91,5 +100,4 @@ testlogger {
     showCauses = true
     showStandardStreams = true
     showFullStackTraces = true
-    filterFullStackTraces = "io\\.kotest.*"
 }
