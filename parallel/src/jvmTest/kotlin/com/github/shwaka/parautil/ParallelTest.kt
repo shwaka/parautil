@@ -15,6 +15,24 @@ class ParallelTest : FreeSpec({
         intList.pmap(transform) shouldBe intList.map(transform)
     }
 
+    "pmapNotNull should return the same result as map" {
+        val intList = listOf(1, 0, 2, 5, 0, 3)
+        val transform: (Int) -> Int? = { if (it == 0) null else it }
+        intList.pmapNotNull(transform) shouldBe intList.mapNotNull(transform)
+    }
+
+    "pmapIndexed should return the same result as map" {
+        val intList = listOf(1, 4, 2, 3)
+        val transform: (Int, Int) -> Int = { i, j -> i + j }
+        intList.pmapIndexed(transform) shouldBe intList.mapIndexed(transform)
+    }
+
+    "pmapIndexedNotNull should return the same result as map" {
+        val intList = listOf(1, 0, 2, 5, 0, 3)
+        val transform: (Int, Int) -> Int? = { i, j -> if (j == 0) null else i + j }
+        intList.pmapIndexedNotNull(transform) shouldBe intList.mapIndexedNotNull(transform)
+    }
+
     "pforEach should do the same as forEach except for the order" {
         val intList = listOf(1, 4, 2, 3)
         val list1 = mutableListOf<Int>()
